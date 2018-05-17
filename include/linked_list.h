@@ -5,6 +5,9 @@
 ** include
 */
 
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
 static const int EXIT_ERROR = 0;
 
 typedef struct node_s {
@@ -27,3 +30,6 @@ int remove_last(linked_list_t *);
 int add_new_at_index(linked_list_t *, int, void *);
 int remove_one(linked_list_t *, node_t *);
 int add_after(linked_list_t *, node_t *, void *);
+int get_node_index(linked_list_t *, node_t *);
+
+#endif

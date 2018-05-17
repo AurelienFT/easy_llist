@@ -17,12 +17,14 @@ SRC		=	$(SRC_DIR)/init_list.c		\
 			$(SRC_DIR)/add_element.c	\
 			$(SRC_DIR)/free_list.c		\
 			$(SRC_DIR)/remove_element.c	\
+			$(SRC_DIR)/get_infos.c		\
 			$(TESTS_DIR)/tests_init_list.c	\
 			$(TESTS_DIR)/tests_add_new_first.c	\
 			$(TESTS_DIR)/tests_add_new_last.c	\
 			$(TESTS_DIR)/tests_add_new_at_index.c	\
 			$(TESTS_DIR)/tests_remove_first.c	\
-			$(TESTS_DIR)/tests_remove_last.c
+			$(TESTS_DIR)/tests_remove_last.c	\
+			$(TESTS_DIR)/tests_get_infos.c
 
 OBJ		=	$(SRC:.c=.o)
 
