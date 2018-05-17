@@ -17,4 +17,6 @@ Test(get_infos, get_node_index)
 	add_new_first(&llist, "Test");
 	cr_assert_eq(get_node_index(&llist, llist.first->next), 1,
 	"Error get node index");
+	cr_assert_eq(get_node_index(&llist, llist.first->next->next), 0,
+	"Error get node index");
 }

@@ -22,6 +22,7 @@ SRC		=	$(SRC_DIR)/init_list.c		\
 			$(TESTS_DIR)/tests_add_new_first.c	\
 			$(TESTS_DIR)/tests_add_new_last.c	\
 			$(TESTS_DIR)/tests_add_new_at_index.c	\
+			$(TESTS_DIR)/tests_add_after.c		\
 			$(TESTS_DIR)/tests_remove_first.c	\
 			$(TESTS_DIR)/tests_remove_last.c	\
 			$(TESTS_DIR)/tests_get_infos.c

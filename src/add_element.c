@@ -33,17 +33,22 @@ int add_new_at_index(linked_list_t *llist, int index, void *data)
 	return (EXIT_SUCCESS);
 }
 
-/*
-** WIP
-*/
 int add_after(linked_list_t *llist, node_t *before, void *data)
 {
-	node_t *new_node = malloc(sizeof(node_t));
+	node_t *new_node;
 
-	if (new_node == NULL || llist == NULL || before == NULL)
+	if (llist == NULL || before == NULL)
 		return (EXIT_ERROR);
 	if (before == llist->last)
 		return (add_new_last(llist, data));
+	new_node = malloc(sizeof(node_t));
+	if (new_node == NULL)
+		return (EXIT_ERROR);
+	new_node->data = data;
+	new_node->prev = before;
+	new_node->next = before->next;
+	before->next = new_node;
+	new_node->next->prev = new_node;
 	return (EXIT_SUCCESS);
 }
 
