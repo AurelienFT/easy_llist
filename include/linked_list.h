@@ -8,7 +8,7 @@
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
-static const int EXIT_ERROR = 0;
+static const int EXIT_ERROR = -1;
 
 typedef struct node_s {
 	void *data;
@@ -31,5 +31,7 @@ int add_new_at_index(linked_list_t *, int, void *);
 int remove_one(linked_list_t *, node_t *);
 int add_after(linked_list_t *, node_t *, void *);
 int get_node_index(linked_list_t *, node_t *);
+int get_size_llist(linked_list_t *);
+void *get_index_value(linked_list_t *, int);
 
 #endif

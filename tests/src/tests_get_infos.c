@@ -20,3 +20,14 @@ Test(get_infos, get_node_index)
 	cr_assert_eq(get_node_index(&llist, llist.first->next->next), 0,
 	"Error get node index");
 }
+
+Test(get_infos, get_size_llist)
+{
+	linked_list_t llist;
+
+	init_list(&llist);
+	cr_assert_eq(get_size_llist(&llist), EXIT_ERROR, "Error get_size_llist");
+	add_new_first(&llist, "Test");
+	add_new_first(&llist, "Test");
+
+}
